@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Portfolio</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://kit.fontawesome.com/4be3fcc78b.js" crossorigin="anonymous"></script>
+</head>
+<body>
+    <!--Home section-->
+    <div id="header">
+        <div class="container">
+            <nav>
+                <ul>
+                    <li><b><a href="#header">Home</a></b></li>
+                    <li><b><a href="#about">About</a></b></li>
+                    <li><b><a href="#courses">My courses</a></b></li>
+                    <li><b><a href="#contact">contact</a></b></li>
+
+                </ul>
+            </nav>
+            <div class="start-text">
+                <h1>Hi, I'm Jidwisha</h1>
+                <h3>An Undergraduate</h3>
+                
+            </div>
+        </div>
+
+        
+    </div>
+    <!--About section-->
+    <div id="about">
+        <div class="container">
+            <div class="row">
+                <div class="about-col-1">
+                    <img src="pic2.jpg" width="400" height="400">
+                </div>
+                <div class="about-col-2">
+                    <h1 class="sub">About Me</h1>
+                    <p>I am constantly expanding my knowledge and skills in frontend technologies, staying up to date with the latest trends and best practices. I am proficient in utilizing frontend frameworks such as React.js, which enable me to build interactive and dynamic web applications. Additionally, I am familiar with version control systems like Git, allowing for efficient collaboration within development teams.</p>
+                    <div class="tab1">
+                        <p class="tab-links active-link" onclick="opentab('Skills')">Skills</p>
+                        <p class="tab-links" onclick="opentab('Certifications')">Certifications</p>
+                        <p class="tab-links" onclick="opentab('Education')">Education</p>
+                        
+                    </div>
+                    <div class="tab-contents active-tab" id="Skills">
+                        <ul>
+                            <li><span>Python</span><br>A Programming Language</li>
+                            <li><span>Front-End Development</span><br>Designing Web Interfaces</li>
+                            <li><span>Machine Learning</span><br>Solving Problems To Find Patterns From A Dataset</li>
+                        </ul>
+                    </div>
+                    <div class="tab-contents" id="Certifications">
+                        <ul>
+                            <li><span>Problem Solving Using Python Programming</span><br>Issued By IEEE Vizag Bay Section</li>
+                            <li><span>IEEE -24hour Coding</span><br>Issued By IEEE</li>
+                            <li><span>Front-End Development</span><br>Issued By IBM</li>
+                        </ul>
+                    </div>
+                    <div class="tab-contents" id="Education">
+                        <ul>
+                            <li><span>2020-2024</span><br>B-Tech CSE-Data Science</li>
+                            <li><span>2018-2020</span><br>Intermediate</li>
+                            <li><span>2018</span><br>Schooling</li>
+                        </ul>
+                    </div>
+                </div>
+
+             </div>
+        </div>
+    </div>
+    <!----Courses-------------------------------------->
+    <div id="courses">
+        <div class="container">
+            <h1 class="sub">My Courses</h1>
+            <div class="courses-list">
+                <div>
+                    <i class="fa-brands fa-python"></i>
+                    <h2>Python Programming</h2>
+                </div>
+                    <div>
+                        <i class="fa-solid fa-code"></i>
+                        <h2>Front-End Development</h2>
+                    </div>
+                        
+                        <div>
+                            <i class="fa-solid fa-robot"></i>
+                            <h2>Machine Learning</h2>
+                        </div>
+        
+
+            </div>
+        </div>
+    </div>
+    <!--------------------------Contact----------------------------->
+    <div id="contact">
+        <div class="container">
+            <div class="row">
+                <div class="contact-left">
+                    <h1 class="sub">Contact Me</h1>
+                    <p><i class="fa-solid fa-paper-plane"></i>jidwishajidhu@gmail.com</p>
+                    <p><i class="fa-solid fa-phone"></i>+917013157101</p>
+                    <div class="social-icons">
+                        <a href="https://instagram.com"><i class="fa-brands fa-square-instagram"></i></a>
+                        <a href="https://whatsapp.com"><i class="fa-brands fa-square-whatsapp"></i></a>
+                        <a href="https://github.com"><i class="fa-brands fa-square-github"></i></a>
+                    </div>
+                    <a href="Jidwisha_Pediredla_Resume upd.pdf" class="btn btn1">Open My CV</a>
+                </div>
+                <div class="contact-right">
+                    <form>
+                        <input type="text" name="Name" placeholder="Your Name" required>
+                        <input type="email" name="email" placeholder="Your Email" required>
+                        <textarea name="Message"  rows="6" placeholder="Your Message"></textarea>
+                        <button type="submit" class="btn btn2">Submit</button>
+
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script>
+        var tablinks= document.getElementsByClassName("tab-links");
+        var tabcontents= document.getElementsByClassName("tab-contents"); 
+
+        function opentab(tabname){
+            for(tablink of tablinks){
+                tablink.classList.remove("active-link");
+            }
+            for(tabcontent of tabcontents){
+                tabcontent.classList.remove("active-tab");
+            }
+                event.currentTarget.classList.add("active-link");
+                document.getElementById(tabname).classList.add("active-tab");
+            
+        }
+    </script>
+
+</body>
+</html>
